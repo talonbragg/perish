@@ -1,11 +1,22 @@
 <html>
   <head>
-  
+      <link rel="stylesheet" href="https://unpkg.com/wingcss"/>
+      <link rel="stylesheet" href="css/main.css"/>
   </head>
   <body>
-    <form>
-      <input type="text" id="responsebox" class="textbox" maxlength="30">
-      <input type="button" id="submitbutton" onclick="submit();" href="javascript:;" class="button" value="Submit">
-    </form>
+    <div class="container center">
+      <ul id="messages">
+        <li>
+          Welcome to Perish. One day you wake up in the morning, it is a normal day for a teenager. Wake up, eat breakfast, and go to school, except there is quite a peculiar feeling in the air for you. There has not been a sound made this morning. So you get up to look around. No one is in the house. Both of your parents and both of your sisters have disappeared. Type "start" to get started.
+        </li>
+      </ul>
+    </div>
+      <div class="container">
+        <input type="text" id="responsebox" class="textbox" maxlength="30" value="">
+        <button id="submitbutton" onclick="submit()" class="button">
+          Submit
+        </button>
+      </div>
+    <script src="js/main.js"></script>
   </body>
 </html>
