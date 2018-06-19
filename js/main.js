@@ -1,3 +1,7 @@
+//Text box value
+
+var response = document.getElementById('responsebox').value;
+
 /*
   Main progress percentage
   This will go up 1% or +1 each time the Game() function runs
@@ -35,15 +39,15 @@ var enemyTankHealth = 200;
 var messages = document.getElementById("messages");
 
 //Situation array
-var situations = ["Nothing has happened", "Nothing has happened", "Nothing has happened", "Nothing has happened", "An enemy is standing in front of you.", "You got shot in the Leg!", "You are gettting shelled my enemy forces", "You are hungry"]
+var situations = ["Nothing has happened, what will you do?", "Nothing has happened, what will you do?", "Nothing has happened, what will you do?", "Nothing has happened, what will you do?", "An enemy is standing in front of you, what will you do?", "You got shot in the Leg, what will you do?", "You are gettting shelled my enemy forces, what will you do?", "You are hungry, what will you do?"]
 //Main game function
 function Game() {
   console.log('Main Game function has initiated');
 
   console.log(situations[Math.floor(Math.random() * situations.length)]);
-  console.log(typeof situations[Math.floor(Math.random * situations.length - 1)]);
+  console.log(typeof situations[Math.floor(Math.random() * situations.length - 1)]);
 
-  var randSituation = situations[Math.floor(Math.random * situations.length - 1)];
+  var randSituation = situations[Math.floor(Math.random() * situations.length - 1)];
 
   var node1 = document.createElement("LI");
   var node2 = document.createElement("LI");
