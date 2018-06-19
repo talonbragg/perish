@@ -1,6 +1,13 @@
+
+
 //Text box value
 
-var response = document.getElementById('responsebox').value;
+var response;
+
+function submit() {
+  response = document.getElementById('responsebox').value;
+  console.log(response);
+}
 
 /*
   Main progress percentage
@@ -69,6 +76,25 @@ function Game() {
   messages.appendChild(node3);
   messages.appendChild(node4);
   messages.appendChild(node5);
+  if (response === "1") {
+    if(situation === "Nothing has happened, what will you do?") {
+      var nothingnode = document.createElement("LI");
+      var nothingtextnode = document.createTextNode("There was no enemy, you didn't hit anyone!");
+      nothingnode.appendChild(nothingtextnode);
+      messages.appendChild(nothingnode);
+    }
+    else if(situation === "An enemy is standing in front of you, what will you do?") {
+      var enemydamage = Math.floor(Math.random * enemyInfantryDamage);
+      var enemyinfrontnode = document.createElement("LI");
+      var newdamagenode = document.createElement("LI");
+      var newdamagetextnode = document.createTextNode("You have been shot by the enemy for" + " " + enemydamage + " " + "damage");
+      var enemyinfronttextnode = document.createTextNode("You have shot the enemy for 50 damage");
+      enemyinfrontnode.appendChild(enemyinfronttextnode);
+      newdamagenode.appendChild(newdamagetextnode);
+      messages.appendChild(newdamagenode);
+      messages.appendChild(enemyinfrontnode);
+    }
+  }
 }
 
 //Run the Game() function
