@@ -3,3 +3,39 @@ ul {
     padding-left: 0;
     padding-top: 10px;
 }
+
+#beforeprogress {
+    position: relative;
+    float: left;
+    left: 5%;
+}
+#progress {
+    position: relative;
+    float: left;
+    left: 10%;
+}
+#afterprogress {
+    position: relative;
+    float: left;
+    left: 10%;
+}
+
+#statwindow {
+    position: fixed;
+    border: 1px solid black;
+    width: 150px;
+    height: 200px;
+}
+
+#beforehealth {
+    position: relative;
+    float: left;
+}
+#health {
+    position: relative;
+    float: left;
+}
+#afterhealth {
+    position: relative;
+    float: left;
+}
